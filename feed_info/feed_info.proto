@@ -1,0 +1,10 @@
+message FeedInfo {
+  required string title = 1;
+  required string source_url = 2;
+  optional string block_search = 3;
+  optional string block_extract = 4;
+  required string item_search = 5;
+  required string item_title = 6;
+  optional string item_url = 7;
+  optional string item_text = 8;
+}

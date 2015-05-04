@@ -1,0 +1,17 @@
+application: any2rss
+version: 1
+runtime: go
+api_version: go1
+
+handlers:
+- url: /
+  static_files: html/index.html
+  upload: html/index.html
+- url: /feed_info.proto
+  static_files: feed_info/feed_info.proto
+  upload: feed_info/feed_info.proto
+- url: /(css|js)/(.*)
+  static_files: html/\1/\2
+  upload: html/.*
+- url: /go/.*
+  script: _go_app
